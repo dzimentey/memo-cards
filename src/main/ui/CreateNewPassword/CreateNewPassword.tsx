@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {SuperInputText} from "../common/SuperInputText/SuperInputText";
 import {SuperButton} from "../common/SuperButton/SuperButton";
 import {Redirect, useParams} from "react-router-dom";
-import {createNewPasswordTC, setNewPasswordErrorAC} from "../../bll/createNewPasswordReducer";
+import {createNewPasswordTC, setNewPasswordErrorAC, setNewPasswordInfoAC} from "../../bll/createNewPasswordReducer";
 import {RootStateType} from "../../bll/store";
 
 export const CreateNewPassword = () => {
@@ -29,7 +29,8 @@ export const CreateNewPassword = () => {
   }
 
   if (info !== '') {
-    alert(info) // show success password change message
+    alert(info); // show success password change message
+    setTimeout(() => dispatch(setNewPasswordInfoAC('')), 3000); // reset info to ''
     return <Redirect to={'/login'} />
   }
 
