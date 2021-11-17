@@ -17,7 +17,7 @@ export const ResetPassword = () => {
     const dispatch = useDispatch()
 
     const message = `<div style="background-color: #cdfbcd; padding: 15px">
-                    password recovery link: <a href='https://dzimentey.github.io/memo-cards/#/set-new-password/$token$'>
+                    password recovery link: <a style="color: #090062; text-decoration: underline" href='https://dzimentey.github.io/memo-cards/#/set-new-password/$token$'>
                     click this link </a></div>`
 
     const [email, setEmail] = useState('')
