@@ -14,6 +14,8 @@ export const ResetPassword = () => {
 
     const error = useSelector<RootStateType, string>(state => state.resetPassword.error)
 
+    const loading = useSelector<RootStateType, boolean>(state => state.resetPassword.loading)
+
     const dispatch = useDispatch()
 
     const message = `<div style="background-color: #cdfbcd; padding: 15px">
@@ -34,7 +36,7 @@ export const ResetPassword = () => {
 
     if (!!info) { // if user email has founded in database redirect to page with further instruction
 
-        return <Redirect to={'/check-email'} />
+        return <Redirect to={'/check-email'}/>
 
     }
 
@@ -53,7 +55,7 @@ export const ResetPassword = () => {
                 }
             </label>
 
-            <SuperButton type={'submit'} style={{width: '200px', borderRadius: '30px'}}
+            <SuperButton type={'submit'} style={{width: '200px', borderRadius: '30px'}} disabled={loading}
             >Send instruction</SuperButton>
         </form>
 
