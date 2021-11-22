@@ -12,6 +12,8 @@ export const CreateNewPassword = () => {
 
   const error = useSelector<RootStateType, string>(state => state.createNewPassword.error)
 
+  const loading = useSelector<RootStateType, boolean>(state => state.createNewPassword.loading)
+
   const dispatch = useDispatch()
 
   let {token} = useParams<{token: string}>();
@@ -49,7 +51,7 @@ export const CreateNewPassword = () => {
         }
       </label>
 
-      <SuperButton type={'submit'} style={{width: '200px', borderRadius: '30px'}}
+      <SuperButton type={'submit'} style={{width: '200px', borderRadius: '30px'}} disabled={loading}
       >Create new password</SuperButton>
     </form>
 
