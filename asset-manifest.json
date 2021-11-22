@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/memo-cards/static/css/main.f62e1bb0.chunk.css",
-    "main.js": "/memo-cards/static/js/main.f1169bb4.chunk.js",
-    "main.js.map": "/memo-cards/static/js/main.f1169bb4.chunk.js.map",
+    "main.js": "/memo-cards/static/js/main.9af611f8.chunk.js",
+    "main.js.map": "/memo-cards/static/js/main.9af611f8.chunk.js.map",
     "runtime-main.js": "/memo-cards/static/js/runtime-main.97b45de1.js",
     "runtime-main.js.map": "/memo-cards/static/js/runtime-main.97b45de1.js.map",
-    "static/js/2.01e8a517.chunk.js": "/memo-cards/static/js/2.01e8a517.chunk.js",
-    "static/js/2.01e8a517.chunk.js.map": "/memo-cards/static/js/2.01e8a517.chunk.js.map",
+    "static/js/2.ab090919.chunk.js": "/memo-cards/static/js/2.ab090919.chunk.js",
+    "static/js/2.ab090919.chunk.js.map": "/memo-cards/static/js/2.ab090919.chunk.js.map",
     "static/js/3.f8faebc1.chunk.js": "/memo-cards/static/js/3.f8faebc1.chunk.js",
     "static/js/3.f8faebc1.chunk.js.map": "/memo-cards/static/js/3.f8faebc1.chunk.js.map",
     "index.html": "/memo-cards/index.html",
     "static/css/main.f62e1bb0.chunk.css.map": "/memo-cards/static/css/main.f62e1bb0.chunk.css.map",
-    "static/js/2.01e8a517.chunk.js.LICENSE.txt": "/memo-cards/static/js/2.01e8a517.chunk.js.LICENSE.txt"
+    "static/js/2.ab090919.chunk.js.LICENSE.txt": "/memo-cards/static/js/2.ab090919.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.97b45de1.js",
-    "static/js/2.01e8a517.chunk.js",
+    "static/js/2.ab090919.chunk.js",
     "static/css/main.f62e1bb0.chunk.css",
-    "static/js/main.f1169bb4.chunk.js"
+    "static/js/main.9af611f8.chunk.js"
   ]
 }
