@@ -8,7 +8,7 @@ import {resetPasswordTC, setResetPasswordErrorAC} from "../../bll/resetPasswordR
 import {RootStateType} from "../../bll/store";
 
 
-export const ResetPassword = () => {
+export const ResetPassword = React.memo( () => {
 
     const info = useSelector<RootStateType, string>(state => state.resetPassword.info)
 
@@ -66,4 +66,4 @@ export const ResetPassword = () => {
         </div>
 
     </div>;
-};
+});
