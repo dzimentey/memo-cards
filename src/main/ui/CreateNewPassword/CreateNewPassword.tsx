@@ -6,7 +6,7 @@ import {Redirect, useParams} from "react-router-dom";
 import {createNewPasswordTC, setNewPasswordErrorAC, setNewPasswordInfoAC} from "../../bll/createNewPasswordReducer";
 import {RootStateType} from "../../bll/store";
 
-export const CreateNewPassword = () => {
+export const CreateNewPassword = React.memo( () => {
 
   const info = useSelector<RootStateType, string>(state => state.createNewPassword.info)
 
@@ -56,4 +56,4 @@ export const CreateNewPassword = () => {
     </form>
 
   </div>;
-};
+});
