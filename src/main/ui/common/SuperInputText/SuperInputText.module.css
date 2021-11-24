@@ -1,7 +1,18 @@
 .superInput {
-  margin: 20px 10px 10px 10px;
-  background: lightpink;
-  color: darkblue;
+  margin: 20px 0 35px;
+  /*background: lightpink;*/
+  color: black;
+  width: 100%;
+  border: none;
+  background-color: inherit;
+  border-bottom: 2px solid rgba(36, 37, 74, 0.5);
+  padding: 0 0 5px 15px;
+  font-size: 18px;
+
+}
+
+.superInput:focus {
+  outline: none;
 }
 
 .errorInput {
