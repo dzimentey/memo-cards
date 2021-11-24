@@ -5,6 +5,8 @@ import {SuperButton} from "../common/SuperButton/SuperButton";
 import {Redirect, useParams} from "react-router-dom";
 import {createNewPasswordTC, setNewPasswordErrorAC, setNewPasswordInfoAC} from "../../bll/createNewPasswordReducer";
 import {RootStateType} from "../../bll/store";
+import {AuthWrapper} from "../common/AuthWrapper/AuthWrapper";
+import s from "../ResetPassword/ResetPassword.module.css";
 
 export const CreateNewPassword = React.memo( () => {
 
@@ -36,24 +38,25 @@ export const CreateNewPassword = React.memo( () => {
     return <Redirect to={'/login'} />
   }
 
-  return <div>Create New Password Page
+  return <div>
 
-    <h3>It-incubator</h3>
-    <h2>Create new password</h2>
+    <AuthWrapper title='Create new password'>
 
-    <form onSubmit={onSubmitHandler}>
+    <form onSubmit={onSubmitHandler} className={s.forgotForm}>
 
       <label>
         <SuperInputText value={password} placeholder={'New password'} onChange={onPasswordChange}/>
         {error !== ''
-            ? <div style={{color: 'red', fontWeight: 500}}>{error}</div>
-            : <div>Enter your New Password and we will save it for you</div>
+            ? <div className={s.error} >{error}</div>
+            : <div className={s.instruction}>Enter your New Password and we will save it for you</div>
         }
       </label>
 
-      <SuperButton type={'submit'} style={{width: '200px', borderRadius: '30px'}} disabled={loading}
+      <SuperButton className={s.btn} type={'submit'} style={{ marginTop: '60px'}} disabled={loading}
       >Create new password</SuperButton>
+
     </form>
 
+    </AuthWrapper>
   </div>;
 });

@@ -6,9 +6,11 @@ import {Path} from "../Routes/Routes";
 import {useDispatch, useSelector} from "react-redux";
 import {resetPasswordTC, setResetPasswordErrorAC} from "../../bll/resetPasswordReducer";
 import {RootStateType} from "../../bll/store";
+import s from "./ResetPassword.module.css"
+import {AuthWrapper} from "../common/AuthWrapper/AuthWrapper";
 
 
-export const ResetPassword = React.memo( () => {
+export const ResetPassword = React.memo(() => {
 
     const info = useSelector<RootStateType, string>(state => state.resetPassword.info)
 
@@ -40,30 +42,29 @@ export const ResetPassword = React.memo( () => {
 
     }
 
-    return <div>Reset password
+    return <div>
 
-        <h3>It-incubator</h3>
-        <h2>Forgot your password?</h2>
+        <AuthWrapper title='Forgot your password?'>
 
-        <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit} className={s.forgotForm}>
 
-            <label>
-                <SuperInputText value={email} placeholder={'Email'} onChange={onEmailChange}/>
-                {error !== ''
-                    ? <div style={{color: 'red', fontWeight: 500}}>{error}</div>
-                    : <div>Enter your email address and we will send you further instruction</div>
-                }
-            </label>
+                <label>
+                    <SuperInputText value={email} placeholder={'Email'} onChange={onEmailChange}/>
+                    {error !== ''
+                        ? <div className={s.error}> {error} </div>
+                        : <div className={s.instruction}>Enter your email address and we will send you further
+                            instruction</div>
+                    }
+                </label>
 
-            <SuperButton type={'submit'} style={{width: '200px', borderRadius: '30px'}} disabled={loading}
-            >Send instruction</SuperButton>
-        </form>
+                <SuperButton className={s.btn} type={'submit'} disabled={loading}
+                >Send instruction</SuperButton>
+            </form>
 
-        <p>Did you remember your password?</p>
-
-        <div>
-            <NavLink to = {Path.LogIn} activeClassName={''}>Try logging in</NavLink>
-        </div>
-
+            <div className={s.textBelow}>
+                <p>Did you remember your password?</p>
+                <NavLink to={Path.LogIn} activeClassName={''}>Try logging in</NavLink>
+            </div>
+        </AuthWrapper>
     </div>;
 });
