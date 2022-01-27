@@ -1,3 +1,5 @@
+# follow the link to browse the [memo-cards app](https://dzimentey.github.io/memo-cards/#/resetPassword)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
